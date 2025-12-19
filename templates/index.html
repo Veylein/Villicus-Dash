@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+{% block title %}Villicus – Home{% endblock %}
+{% block content %}
+  <section class="bg-gradient-to-r from-indigo-900/40 via-slate-900/30 to-emerald-900/30 p-8 rounded-3xl shadow-2xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Villicus — Premium Moderation, Redefined</h1>
+        <p class="mt-4 text-slate-300 text-lg">A beautiful, powerful, and configurable moderation platform for communities that expect excellence. Configure everything from role-based staff tiers to automated punishments and bespoke audit embeds.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="{{ oauth_url }}" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-400 text-slate-900 font-semibold shadow">Sign in with Discord</a>
+          <a href="/dashboard" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-700 text-slate-200">Open Dashboard</a>
+        </div>
+        <div class="mt-8 grid grid-cols-2 gap-4">
+          <div class="p-4 bg-slate-800/60 rounded-lg">
+            <h3 class="font-semibold">Action Logging</h3>
+            <p class="text-slate-400 text-sm">Beautiful, configurable audit embeds with undo & appeal flows.</p>
+          </div>
+          <div class="p-4 bg-slate-800/60 rounded-lg">
+            <h3 class="font-semibold">Automations</h3>
+            <p class="text-slate-400 text-sm">Warn thresholds, tempbans, mutes and deep automod controls.</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/40 rounded-2xl">
+        <div class="p-4 bg-slate-900/60 rounded-lg">
+          <h4 class="text-xl font-bold">Why Villicus?</h4>
+          <ul class="mt-3 space-y-2 text-slate-300">
+            <li>• Hybrid commands and slash support</li>
+            <li>• Persistent punishments & automatic expiration</li>
+            <li>• Web-based guild configuration & styling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="text-2xl font-semibold">Featured</h2>
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-4 rounded-xl bg-gradient-to-br from-indigo-800 to-slate-800 shadow-lg">
+        <h3 class="font-bold">Ghost Mode (Coming)</h3>
+        <p class="text-slate-300 text-sm">Advanced per-user visibility controls — prototype-ready.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-gradient-to-br from-emerald-800 to-slate-800 shadow-lg">
+        <h3 class="font-bold">Auto-Actions</h3>
+        <p class="text-slate-300 text-sm">Warn -> punish pipelines with customizable thresholds.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-gradient-to-br from-violet-800 to-slate-800 shadow-lg">
+        <h3 class="font-bold">Appeals</h3>
+        <p class="text-slate-300 text-sm">Integration-ready appeals and support workflows.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-gradient-to-br from-pink-800 to-slate-800 shadow-lg">
+        <h3 class="font-bold">VIP UI</h3>
+        <p class="text-slate-300 text-sm">Polished embeds, role-based theming, and bespoke icons.</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}
