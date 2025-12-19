@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Villicus — VIP Moderation Dashboard (Demo)</title>
+  <meta name="description" content="Villicus — deluxe moderation dashboard demo. Configure staff roles, warns, themes, tickets, and more." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="https://images-ext-1.discordapp.net/external/bMUweS2hI457BL058FCqeeVmZfGf3dl4zQDeX8W2cY8/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1449497407028068443/3a2a174336f8e469d3b754557cc74db4.png?format=webp&quality=lossless" alt="Villicus" />
+        <h1>Villicus Dash</h1>
+      </div>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard (demo)</a>
+        <a href="configure_111111.html">Configure (demo)</a>
+        <a href="#signin" class="btn btn-primary">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <div class="hero-left">
+      <h2 class="headline">The Ultimate VIP Moderation Dashboard</h2>
+      <p class="lead">Control every aspect of Villicus: features, staff roles (1–10), warn thresholds, tickets, roles, muted/quarantine roles, themes and more — all with a premium UX.</p>
+      <p class="muted">This is a static demo for GitHub Pages. For full OAuth-driven functionality, host the backend and point the Sign-in button to the live `/login` endpoint.</p>
+      <div class="hero-cta">
+        <a href="dashboard.html" class="btn btn-ghost">View Demo Dashboard</a>
+        <a href="configure_111111.html" class="btn btn-outline">Open Demo Config</a>
+      </div>
+    </div>
+    <aside class="hero-right">
+      <div class="card">
+        <h3>Themes</h3>
+        <div class="theme-grid">
+          <button data-theme="light" class="theme-swatch" title="Light">Light</button>
+          <button data-theme="dark" class="theme-swatch" title="Dark">Dark</button>
+          <button data-theme="earth" class="theme-swatch" title="Earth">Earth</button>
+          <button data-theme="ocean" class="theme-swatch" title="Ocean">Ocean</button>
+          <button data-theme="chastity" class="theme-swatch" title="Chastity">Chastity</button>
+          <button data-theme="lust" class="theme-swatch" title="Lust">Lust</button>
+        </div>
+        <p class="muted">Preview a theme, then open the configure demo to see how it persists on a live backend.</p>
+      </div>
+      <div class="card mt">
+        <h3>Quick Features</h3>
+        <ul class="features">
+          <li>Toggle automod, antinuke, welcome, tickets, logging</li>
+          <li>Staff levels 1–10 mapped to roles</li>
+          <li>Warns → punishment thresholds with buttons</li>
+          <li>Theme presets, logo upload, and accent color</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <section class="container cards">
+    <article class="card wide">
+      <h3>How it works</h3>
+      <ol>
+        <li>Sign in with Discord (server-side OAuth) — website exchanges token for a short-lived guild-scoped JWT.</li>
+        <li>Website calls bot API (JWT or X-API-KEY) to read/write `guild_settings` stored by `ModManager`.</li>
+        <li>Commands in the bot check staff level & command-required level before executing moderation actions.</li>
+      </ol>
+    </article>
+    <article class="card wide">
+      <h3>Publish</h3>
+      <p class="muted">Push this folder to a GitHub repo and enable Pages (serve from `main` branch `/docs` or publish from this folder). For the interactive site, host the dynamic backend and update the Sign-in link to point at its `/login`.</p>
+    </article>
+  </section>
+
+  <footer class="container footer">
+    <div>Villicus • Demo site • <a href="#">Docs</a></div>
+    <div class="muted">Made for VIP moderation</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
